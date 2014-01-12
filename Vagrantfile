@@ -42,7 +42,7 @@ EOF},
   provisioning_script = ["export DEBIAN_FRONTEND=noninteractive"]
   provisioning_script += provision_jenkins
 
-  config.vm.provision :shell, :path   => 'https://raw.github.com/roovo/bearded-octo-batman/master/provision_dev_essentials'
-  config.vm.provision :shell, :path   => 'https://raw.github.com/roovo/bearded-octo-batman/master/provision_dockerize'
+  config.vm.provision :shell, :path   => 'https://raw.github.com/roovo/bearded-octo-batman/master/script/provision_dev_essentials'
+  config.vm.provision :shell, :path   => 'https://raw.github.com/roovo/bearded-octo-batman/master/script/provision_dockerize'
   config.vm.provision :shell, :inline => provisioning_script.join("\n")
 end
